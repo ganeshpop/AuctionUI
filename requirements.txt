@@ -5,3 +5,4 @@ pytailwindcss
 pytest
 python-multipart
 tinydb
+arel

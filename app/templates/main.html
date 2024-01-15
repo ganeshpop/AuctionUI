@@ -1,21 +1,1215 @@
 {% extends "/shared/_base.html" %}
 
 {% block content %}
-    <section id="body" class="flex flex-col bg-slate-50 justify-center items-center max-w-screen-lg m-auto">
-        <div class="flex flex-col justify-center items-center py-8">
-            <h2 class="text-2xl leading-relaxed text-slate-800 uppercase">Welcome</h2>
-            <div id="main-info" class="flex flex-col px-24 py-4">
-                <p class="py-2">If this were the olden days, I'd have a CD Binder with a bunch of CDs and mismatched
-                    CD Sleeves. But thanks to this little web app, I can organize digitally, with a couple
-                    of tricks up my... ahem, ahem... sleeve.
-                </p>
-                <p class="py-2">I currently have {{artist_count}} artists saved.</p>
-                <p class="py-2 text-center"><a href="/" class="py-1 px-2 rounded-md bg-cyan-800 text-slate-50 hover:bg-cyan-500">Randomize!</a></p>
+
+<section class="px-12 font-teko" style="zoom: 150%;">
+    <div class="max-w-lg mx-auto relative">
+
+        <input id="article-01" type="radio" name="slider" class="sr-only peer/01" checked>
+        <input id="article-02" type="radio" name="slider" class="sr-only peer/02">
+        <input id="article-03" type="radio" name="slider" class="sr-only peer/03">
+        <input id="article-04" type="radio" name="slider" class="sr-only peer/04">
+        <input id="article-05" type="radio" name="slider" class="sr-only peer/05">
+
+        <div class="
+                absolute inset-0 scale-[67.5%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+                peer-focus-visible/01:[&_article]:ring
+                peer-focus-visible/01:[&_article]:ring-indigo-300
+                peer-checked/01:relative
+                peer-checked/01:z-50
+                peer-checked/01:translate-x-0
+                peer-checked/01:scale-100
+                peer-checked/01:[&>label]:pointer-events-none
+                peer-checked/02:-translate-x-20
+                peer-checked/02:scale-[83.75%]
+                peer-checked/02:z-40
+                peer-checked/03:-translate-x-40
+                peer-checked/03:z-30
+                peer-checked/04:-translate-x-40                    
+                peer-checked/04:opacity-0
+                peer-checked/05:-translate-x-40
+            ">
+            <label class="absolute inset-0" for="article-01">
+                <span class="sr-only">Player Name</span></label>
+            <article class="bg-white  border-dpl-red border-8 p-6 rounded-2xl shadow-2xl">
+                <header class=" mb-2 flex justify-center items-center gap-5">
+                    <div class=" me-3 inline-block shrink-0 rounded-2xl">
+                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                            class="h-[100px] w-[100px] shrink-0 rounded-xl" alt="" />
+                    </div>
+                    <div class="me-3 mt-3 inline-block shrink-0 ">
+                        <p class=" text-5xl font-bold text-dpl-blue pb-1 ">Player Name</p>
+                        <p class=" text-3xl font-semibold text-dpl-blue pb-1">Base Price: 140K</p>
+                        <span
+                            class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                            </svg>
+                            Uncapped</span>
+                        <span
+                            class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                                viewBox="0 0 1024 1024" version="1.1">
+                                <path
+                                    d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                                    fill="" />
+                            </svg> Female</span>
+
+                    </div>
+
+
+                </header>
+                <div class="mx-auto mt-10 grid grid-cols-2  text-4xl justify-items-center text-red-600">
+                    <span class="flex col-span-1  font-bold   object-contain"> Current Bid</span>
+
+                    <span class="flex col-span-1 font-bold object-contain">Highest Bidder</span>
+                </div>
+                <div class="mx-auto mt-4 grid grid-cols-2 text-6xl justify-items-center">
+                    <span class="flex col-span-1  font-bold  object-contain"> 180K</span>
+
+                    <span class="flex col-span-1  font-bold object-contain">Team 1</span>
+                </div>
+
+            </article>
+        </div>
+
+        <div class="
+                absolute inset-0 scale-[67.5%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+                peer-focus-visible/02:[&_article]:ring
+                peer-focus-visible/02:[&_article]:ring-indigo-300                        
+                peer-checked/01:translate-x-20
+                peer-checked/01:scale-[83.75%]
+                peer-checked/01:z-40
+                peer-checked/02:relative
+                peer-checked/02:z-50
+                peer-checked/02:translate-x-0
+                peer-checked/02:scale-100
+                peer-checked/02:[&>label]:pointer-events-none
+                peer-checked/03:-translate-x-20
+                peer-checked/03:scale-[83.75%]
+                peer-checked/03:z-40
+                peer-checked/04:-translate-x-40
+                peer-checked/04:z-30
+                peer-checked/05:-translate-x-40 
+                peer-checked/05:opacity-0
+            ">
+            <label class="absolute inset-0" for="article-02"><span class="sr-only">Focus on the big
+                    picture</span></label>
+            <article class="bg-white  border-dpl-red border-8 p-6 rounded-2xl shadow-2xl">
+                <header class=" mb-2 flex justify-center items-center gap-5">
+                    <div class=" me-3 inline-block shrink-0 rounded-2xl">
+                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                            class="h-[100px] w-[100px] shrink-0 rounded-xl" alt="" />
+                    </div>
+                    <div class="me-3 mt-3 inline-block shrink-0 ">
+                        <p class=" text-5xl font-bold text-dpl-blue pb-1 ">Player Name</p>
+                        <p class=" text-3xl font-semibold text-dpl-blue pb-1">Base Price: 140K</p>
+                        <span
+                            class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                            </svg>
+                            Uncapped</span>
+                        <span
+                            class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                                viewBox="0 0 1024 1024" version="1.1">
+                                <path
+                                    d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                                    fill="" />
+                            </svg> Female</span>
+
+                    </div>
+
+
+                </header>
+                <div class="mx-auto mt-10 grid grid-cols-2  text-4xl justify-items-center text-red-600">
+                    <span class="flex col-span-1  font-bold   object-contain"> Current Bid</span>
+
+                    <span class="flex col-span-1 font-bold object-contain">Highest Bidder</span>
+                </div>
+                <div class="mx-auto mt-4 grid grid-cols-2 text-6xl justify-items-center">
+                    <span class="flex col-span-1  font-bold  object-contain"> 180K</span>
+
+                    <span class="flex col-span-1  font-bold object-contain">Team 1</span>
+                </div>
+
+            </article>
+        </div>
+
+        <div class="
+                absolute inset-0 scale-[67.5%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+                peer-focus-visible/03:[&_article]:ring
+                peer-focus-visible/03:[&_article]:ring-indigo-300                          
+                peer-checked/01:translate-x-40
+                peer-checked/01:z-30
+                peer-checked/02:translate-x-20
+                peer-checked/02:scale-[83.75%]
+                peer-checked/02:z-40
+                peer-checked/03:relative
+                peer-checked/03:z-50
+                peer-checked/03:translate-x-0
+                peer-checked/03:scale-100
+                peer-checked/03:[&>label]:pointer-events-none
+                peer-checked/04:-translate-x-20
+                peer-checked/04:scale-[83.75%]
+                peer-checked/04:z-40
+                peer-checked/05:-translate-x-40
+                peer-checked/05:z-30                  
+            ">
+            <label class="absolute inset-0" for="article-03"><span class="sr-only">Focus on the big
+                    picture</span></label>
+            <article class="bg-white  border-dpl-red border-8 p-6 rounded-2xl shadow-2xl">
+                <header class=" mb-2 flex justify-center items-center gap-5">
+                    <div class=" me-3 inline-block shrink-0 rounded-2xl">
+                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                            class="h-[100px] w-[100px] shrink-0 rounded-xl" alt="" />
+                    </div>
+                    <div class="me-3 mt-3 inline-block shrink-0 ">
+                        <p class=" text-5xl font-bold text-dpl-blue pb-1 ">Player Name</p>
+                        <p class=" text-3xl font-semibold text-dpl-blue pb-1">Base Price: 140K</p>
+                        <span
+                            class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                            </svg>
+                            Uncapped</span>
+                        <span
+                            class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                                viewBox="0 0 1024 1024" version="1.1">
+                                <path
+                                    d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                                    fill="" />
+                            </svg> Female</span>
+
+                    </div>
+
+
+                </header>
+                <div class="mx-auto mt-10 grid grid-cols-2  text-4xl justify-items-center text-red-600">
+                    <span class="flex col-span-1  font-bold   object-contain"> Current Bid</span>
+
+                    <span class="flex col-span-1 font-bold object-contain">Highest Bidder</span>
+                </div>
+                <div class="mx-auto mt-4 grid grid-cols-2 text-6xl justify-items-center">
+                    <span class="flex col-span-1  font-bold  object-contain"> 180K</span>
+
+                    <span class="flex col-span-1  font-bold object-contain">Team 1</span>
+                </div>
+
+            </article>
+        </div>
+
+        <div class="
+                absolute inset-0 scale-[67.5%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+                peer-focus-visible/04:[&_article]:ring
+                peer-focus-visible/04:[&_article]:ring-indigo-300                          
+    
+                peer-checked/01:translate-x-40 
+                peer-checked/01:opacity-0
+                
+                peer-checked/02:translate-x-40
+                peer-checked/02:z-30
+                
+                peer-checked/03:translate-x-20
+                peer-checked/03:scale-[83.75%]
+                peer-checked/03:z-40
+    
+                peer-checked/04:relative
+                peer-checked/04:z-50
+                peer-checked/04:translate-x-0
+                peer-checked/04:scale-100
+                peer-checked/04:[&>label]:pointer-events-none
+                
+                peer-checked/05:-translate-x-20
+                peer-checked/05:scale-[83.75%]
+                peer-checked/05:z-40
+            ">
+            <label class="absolute inset-0" for="article-04"><span class="sr-only">Focus on the big
+                    picture</span></label>
+            <article class="bg-white  border-dpl-red border-8 p-6 rounded-2xl shadow-2xl">
+                <header class=" mb-2 flex justify-center items-center gap-5">
+                    <div class=" me-3 inline-block shrink-0 rounded-2xl">
+                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                            class="h-[100px] w-[100px] shrink-0 rounded-xl" alt="" />
+                    </div>
+                    <div class="me-3 mt-3 inline-block shrink-0 ">
+                        <p class=" text-5xl font-bold text-dpl-blue pb-1 ">Player Name</p>
+                        <p class=" text-3xl font-semibold text-dpl-blue pb-1">Base Price: 140K</p>
+                        <span
+                            class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                            </svg>
+                            Uncapped</span>
+                        <span
+                            class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                                viewBox="0 0 1024 1024" version="1.1">
+                                <path
+                                    d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                                    fill="" />
+                            </svg> Female</span>
+
+                    </div>
+
+
+                </header>
+                <div class="mx-auto mt-10 grid grid-cols-2  text-4xl justify-items-center text-red-600">
+                    <span class="flex col-span-1  font-bold   object-contain"> Current Bid</span>
+
+                    <span class="flex col-span-1 font-bold object-contain">Highest Bidder</span>
+                </div>
+                <div class="mx-auto mt-4 grid grid-cols-2 text-6xl justify-items-center">
+                    <span class="flex col-span-1  font-bold  object-contain"> 180K</span>
+
+                    <span class="flex col-span-1  font-bold object-contain">Team 1</span>
+                </div>
+
+            </article>
+        </div>
+
+        <div class="
+                absolute inset-0 scale-[67.5%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+                peer-focus-visible/05:[&_article]:ring
+                peer-focus-visible/05:[&_article]:ring-indigo-300                          
+                peer-checked/01:translate-x-40 
+                peer-checked/02:translate-x-40 
+                peer-checked/02:opacity-0
+                peer-checked/03:translate-x-40
+                peer-checked/03:z-30
+                peer-checked/04:translate-x-20
+                peer-checked/04:scale-[83.75%]
+                peer-checked/04:z-40
+                peer-checked/05:relative
+                peer-checked/05:z-50
+                peer-checked/05:translate-x-0
+                peer-checked/05:scale-100
+                peer-checked/05:[&>label]:pointer-events-none
+            ">
+            <label class="absolute inset-0" for="article-05"><span class="sr-only">Focus on the big
+                    picture</span></label>
+            <article class="bg-white  border-dpl-red border-8 p-6 rounded-2xl shadow-2xl">
+                <header class=" mb-2 flex justify-center items-center gap-5">
+                    <div class=" me-3 inline-block shrink-0 rounded-2xl">
+                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                            class="h-[100px] w-[100px] shrink-0 rounded-xl" alt="" />
+                    </div>
+                    <div class="me-3 mt-3 inline-block shrink-0 ">
+                        <p class=" text-5xl font-bold text-dpl-blue pb-1 ">Player Name</p>
+                        <p class=" text-3xl font-semibold text-dpl-blue pb-1">Base Price: 140K</p>
+                        <span
+                            class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                            </svg>
+                            Uncapped</span>
+                        <span
+                            class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                                viewBox="0 0 1024 1024" version="1.1">
+                                <path
+                                    d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                                    fill="" />
+                            </svg> Female</span>
+
+                    </div>
+
+
+                </header>
+                <div class="mx-auto mt-10 grid grid-cols-2  text-4xl justify-items-center text-red-600">
+                    <span class="flex col-span-1  font-bold object-contain"> Current Bid</span>
+
+                    <span class="flex col-span-1 font-bold object-contain">Highest Bidder</span>
+                </div>
+                <div class="mx-auto mt-4 grid grid-cols-2 text-6xl justify-items-center">
+                    <span class="flex col-span-1  font-bold  object-contain"> 180K</span>
+
+                    <span class="flex col-span-1  font-bold object-contain">Team 1</span>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</section>
+
+<div class="p-6 font-teko">
+    
+    <!-- <div class="bg-white mx-12 mb-5 flex-none p-6 border-dpl-red border-8 shadow-xl rounded-2xl ">
+
+
+   </div> -->
+ 
+    <div class="flex relative mx-12 flex-row gap-3.5">
+        <!-- Start -->
+        <div
+            class=" rounded-2xl w-1/3 bg-white border-dpl-red border-8 px-6 pt-4 shadow-xl ring-1 ring-gray-900/5">
+            <div class="mx-auto text-center">
+                <div class=" inline-block shrink-0 rounded-2xl">
+                    <span class=" pl-64 text-dark font-bold text-8xl pr-4">Team 1</span>
+                </div>
+                
+                <div class="inline-block">
+
+                <div >
+                    <span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 m-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                        </svg>
+                        Uncapped
+                    </span>
+                    <span
+                        class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 m-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                            viewBox="0 0 1024 1024" version="1.1">
+                            <path
+                                d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                                fill="" />
+                        </svg> Female
+                    </span> 
+                </div>
+                <div class=" inline-block shrink-0 ">
+                    <span class="inline-flex items-center rounded-md bg-grey-50 px-2 py-1 m-1 text-xl font-medium text-gray-400 ring-1 ring-inset ring-grey-700/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                        </svg>
+                        Uncapped</span>
+                    <span
+                        class="inline-flex items-center rounded-md bg-grey-50 px-2 py-1 m-1 text-xl font-medium text-gray-400 ring-1 ring-inset ring-grey-700/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                            viewBox="0 0 1024 1024" version="1.1">
+                            <path
+                                d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                                fill="" />
+                        </svg> Female
+                    </span>
+                    
+
+                </div>
+
             </div>
-            <div class="flex flex-col justify-center content-center text-center">
-                <img src="{{random_artist['cover_image']}}" />
-                <span class="py-4 uppercase font-bold">{{random_artist["name"]}}</span>
+
+                
+                    
+                    <!-- <div class="relative  ">
+                        <span class=" text-dark font-bold text-8xl"><span
+                            class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-3xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                            Uncapped Players: 0
+                        </span>
+                        <span class="text-dark font-bold text-8xl"><span
+                            class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-3xl font-medium text-pink-500 ring-1 ring-inset ring-blue-700/10">
+                            Female Players: 0
+                        </span>
+                        
+
+                    </div> -->
+
+
+              
+                    
+                    
+                </span>
+                <div class="divide-y divide-gray-300/50">
+                    <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div class="block flex-auto px-9 py-8 pt-6">
+                            <div class="overflow-x-auto">
+                                <table class="text-dark my-0  w-full border-neutral-200 align-middle">
+                                    <thead class="align-bottom text-dpl-red text-4xl">
+                                        <tr class="font-semibold">
+                                            <th class="pb-3 min-w-[175px] text-start">PLAYER</th>
+                                            <th class="pb-3">BASE PRICE</th>
+                                            <th class="pb-3">SOLD FOR</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b border-dashed last:border-b-0">
+                                            <td class="p-3 pl-0">
+                                                <div class="flex items-center">
+                                                    <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                            class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                            alt="" />
+                                                    </div>
+                                                    <div class="">
+                                                        <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+                                                        <span
+                                                            class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                                viewBox="0 0 24 24" stroke-width="1.5"
+                                                                stroke="currentColor" class="mr-1 h-5 w-5">
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                                                            </svg>
+                                                            Uncapped</span>
+                                                        <span
+                                                            class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5"
+                                                                fill="currentColor" viewBox="0 0 1024 1024"
+                                                                version="1.1">
+                                                                <path
+                                                                    d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                                                                    fill="" />
+                                                            </svg> Female</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="p-3 pr-0 text-center">
+                                                <span class="mb-1 text-5xl font-semibold">100K</span>
+                                            </td>
+                                            <td class="p-3 flex justify-center pr-0 text-center">
+                                                <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                            </td>
+
+
+
+                                        </tr>
+                                        <tr class="border-b border-dashed last:border-b-0">
+                                            <td class="p-3 pl-0">
+                                                <div class="flex items-center">
+                                                    <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                            class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                            alt="" />
+                                                    </div>
+                                                    <div class="">
+                                                        <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="p-3 pr-0 text-center">
+                                                <span class="mb-1 text-5xl font-semibold">100K</span>
+                                            </td>
+                                            <td class="p-3 flex justify-center pr-0 text-center">
+                                                <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                            </td>
+                                        </tr>
+                                        <tr class="border-b border-dashed last:border-b-0">
+                                            <td class="p-3 pl-0">
+                                                <div class="flex items-center">
+                                                    <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                            class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                            alt="" />
+                                                    </div>
+                                                    <div class="">
+                                                        <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="p-3 pr-0 text-center">
+                                                <span class="mb-1 text-5xl font-semibold">100K</span>
+                                            </td>
+                                            <td class="p-3 flex justify-center pr-0 text-center">
+                                                <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                            </td>
+                                        </tr>
+                                        <tr class="border-b border-dashed last:border-b-0">
+                                            <td class="p-3 pl-0">
+                                                <div class="flex items-center">
+                                                    <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                            class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                            alt="" />
+                                                    </div>
+                                                    <div class="">
+                                                        <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="p-3 pr-0 text-center">
+                                                <span class="mb-1 text-5xl font-semibold">100K</span>
+                                            </td>
+                                            <td class="p-3 flex justify-center pr-0 text-center">
+                                                <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                            </td>
+                                        </tr>
+                                        <tr class="border-b border-dashed last:border-b-0">
+                                            <td class="p-3 pl-0">
+                                                <div class="flex items-center">
+                                                    <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                            class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                            alt="" />
+                                                    </div>
+                                                    <div class="">
+                                                        <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="p-3 pr-0 text-center">
+                                                <span class="mb-1 text-5xl font-semibold">100K</span>
+                                            </td>
+                                            <td class="p-3 flex justify-center pr-0 text-center">
+                                                <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                            </td>
+                                        </tr>
+                                        <tr class="border-b border-dashed last:border-b-0">
+                                            <td class="p-3 pl-0">
+                                                <div class="flex items-center">
+                                                    <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                            class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                            alt="" />
+                                                    </div>
+                                                    <div class="">
+                                                        <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="p-3 pr-0 text-center">
+                                                <span class="mb-1 text-5xl font-semibold">100K</span>
+                                            </td>
+                                            <td class="p-3 flex justify-center pr-0 text-center">
+                                                <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                            </td>
+                                        </tr>
+                                        <tr class="border-b border-dashed last:border-b-0">
+                                            <td class="p-3 pl-0">
+                                                <div class="flex items-center">
+                                                    <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                        <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                            class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                            alt="" />
+                                                    </div>
+                                                    <div class="">
+                                                        <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="p-3 pr-0 text-center">
+                                                <span class="mb-1 text-5xl font-semibold">100K</span>
+                                            </td>
+                                            <td class="p-3 flex justify-center pr-0 text-center">
+                                                <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mx-auto mt-10 grid grid-cols-2 pt-5 justify-items-center ">
+                        <span class="flex col-span-2  font-bold text-6xl text-red-600 object-contain">Purse
+                            Amount</span>
+                        <span class="flex col-span-2  font-bold text-8xl object-contain"> 180K</span>
+
+
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+
+
+        
+
+        <div
+        class=" rounded-2xl w-1/3 bg-white border-dpl-red border-8 px-6 pt-4 shadow-xl ring-1 ring-gray-900/5">
+        <div class="mx-auto  text-center">
+            <div class=" pl-64 inline-block shrink-0 rounded-2xl">
+                <span class=" text-dark font-bold text-8xl pr-4">Team 2</span>
+            </div>
+            
+            <div class="inline-block">
+
+            <div >
+                <span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 m-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                    </svg>
+                    Uncapped
+                </span>
+                <span
+                    class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 m-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                        viewBox="0 0 1024 1024" version="1.1">
+                        <path
+                            d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                            fill="" />
+                    </svg> Female
+                </span> 
+            </div>
+            <div class=" inline-block shrink-0 ">
+                <span class="inline-flex items-center rounded-md bg-grey-50 px-2 py-1 m-1 text-xl font-medium text-gray-400 ring-1 ring-inset ring-grey-700/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                    </svg>
+                    Uncapped</span>
+                <span
+                    class="inline-flex items-center rounded-md bg-grey-50 px-2 py-1 m-1 text-xl font-medium text-gray-400 ring-1 ring-inset ring-grey-700/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                        viewBox="0 0 1024 1024" version="1.1">
+                        <path
+                            d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                            fill="" />
+                    </svg> Female
+                </span>
+                
+
+            </div>
+
+        </div>
+
+            
+                
+                <!-- <div class="relative  ">
+                    <span class=" text-dark font-bold text-8xl"><span
+                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-3xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                        Uncapped Players: 0
+                    </span>
+                    <span class="text-dark font-bold text-8xl"><span
+                        class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-3xl font-medium text-pink-500 ring-1 ring-inset ring-blue-700/10">
+                        Female Players: 0
+                    </span>
+                    
+
+                </div> -->
+
+
+          
+                
+                
+            </span>
+            <div class="divide-y divide-gray-300/50">
+                <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
+                    <div class="block flex-auto px-9 py-8 pt-6">
+                        <div class="overflow-x-auto">
+                            <table class="text-dark my-0  w-full border-neutral-200 align-middle">
+                                <thead class="align-bottom text-dpl-red text-4xl">
+                                    <tr class="font-semibold">
+                                        <th class="pb-3 min-w-[175px] text-start">PLAYER</th>
+                                        <th class="pb-3">BASE PRICE</th>
+                                        <th class="pb-3">SOLD FOR</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-dashed last:border-b-0">
+                                        <td class="p-3 pl-0">
+                                            <div class="flex items-center">
+                                                <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                    <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                        class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                        alt="" />
+                                                </div>
+                                                <div class="">
+                                                    <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+                                                    <span
+                                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                            viewBox="0 0 24 24" stroke-width="1.5"
+                                                            stroke="currentColor" class="mr-1 h-5 w-5">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                                                        </svg>
+                                                        Uncapped</span>
+                                                    <span
+                                                        class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5"
+                                                            fill="currentColor" viewBox="0 0 1024 1024"
+                                                            version="1.1">
+                                                            <path
+                                                                d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                                                                fill="" />
+                                                        </svg> Female</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td class="p-3 pr-0 text-center">
+                                            <span class="mb-1 text-5xl font-semibold">100K</span>
+                                        </td>
+                                        <td class="p-3 flex justify-center pr-0 text-center">
+                                            <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                        </td>
+
+
+
+                                    </tr>
+                                    <tr class="border-b border-dashed last:border-b-0">
+                                        <td class="p-3 pl-0">
+                                            <div class="flex items-center">
+                                                <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                    <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                        class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                        alt="" />
+                                                </div>
+                                                <div class="">
+                                                    <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td class="p-3 pr-0 text-center">
+                                            <span class="mb-1 text-5xl font-semibold">100K</span>
+                                        </td>
+                                        <td class="p-3 flex justify-center pr-0 text-center">
+                                            <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-dashed last:border-b-0">
+                                        <td class="p-3 pl-0">
+                                            <div class="flex items-center">
+                                                <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                    <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                        class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                        alt="" />
+                                                </div>
+                                                <div class="">
+                                                    <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td class="p-3 pr-0 text-center">
+                                            <span class="mb-1 text-5xl font-semibold">100K</span>
+                                        </td>
+                                        <td class="p-3 flex justify-center pr-0 text-center">
+                                            <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-dashed last:border-b-0">
+                                        <td class="p-3 pl-0">
+                                            <div class="flex items-center">
+                                                <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                    <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                        class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                        alt="" />
+                                                </div>
+                                                <div class="">
+                                                    <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td class="p-3 pr-0 text-center">
+                                            <span class="mb-1 text-5xl font-semibold">100K</span>
+                                        </td>
+                                        <td class="p-3 flex justify-center pr-0 text-center">
+                                            <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-dashed last:border-b-0">
+                                        <td class="p-3 pl-0">
+                                            <div class="flex items-center">
+                                                <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                    <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                        class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                        alt="" />
+                                                </div>
+                                                <div class="">
+                                                    <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td class="p-3 pr-0 text-center">
+                                            <span class="mb-1 text-5xl font-semibold">100K</span>
+                                        </td>
+                                        <td class="p-3 flex justify-center pr-0 text-center">
+                                            <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-dashed last:border-b-0">
+                                        <td class="p-3 pl-0">
+                                            <div class="flex items-center">
+                                                <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                    <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                        class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                        alt="" />
+                                                </div>
+                                                <div class="">
+                                                    <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td class="p-3 pr-0 text-center">
+                                            <span class="mb-1 text-5xl font-semibold">100K</span>
+                                        </td>
+                                        <td class="p-3 flex justify-center pr-0 text-center">
+                                            <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-dashed last:border-b-0">
+                                        <td class="p-3 pl-0">
+                                            <div class="flex items-center">
+                                                <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                    <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                        class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                        alt="" />
+                                                </div>
+                                                <div class="">
+                                                    <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td class="p-3 pr-0 text-center">
+                                            <span class="mb-1 text-5xl font-semibold">100K</span>
+                                        </td>
+                                        <td class="p-3 flex justify-center pr-0 text-center">
+                                            <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mx-auto mt-10 grid grid-cols-2 pt-5 justify-items-center ">
+                    <span class="flex col-span-2  font-bold text-6xl text-red-600 object-contain">Purse
+                        Amount</span>
+                    <span class="flex col-span-2  font-bold text-8xl object-contain"> 180K</span>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+    class=" rounded-2xl w-1/3 bg-white border-dpl-red border-8 px-6 pt-4 shadow-xl ring-1 ring-gray-900/5">
+    <div class="mx-auto text-center">
+        <div class=" inline-block shrink-0 rounded-2xl">
+            <span class=" pl-64 text-dark font-bold text-8xl pr-4">Team 3</span>
+        </div>
+        
+        <div class="inline-block">
+
+        <div >
+            <span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 m-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                </svg>
+                Uncapped
+            </span>
+            <span
+                class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 m-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                    viewBox="0 0 1024 1024" version="1.1">
+                    <path
+                        d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                        fill="" />
+                </svg> Female
+            </span> 
+        </div>
+        <div class=" inline-block shrink-0 ">
+            <span class="inline-flex items-center rounded-md bg-grey-50 px-2 py-1 m-1 text-xl font-medium text-gray-400 ring-1 ring-inset ring-grey-700/10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="mr-1 h-5 w-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                </svg>
+                Uncapped</span>
+            <span
+                class="inline-flex items-center rounded-md bg-grey-50 px-2 py-1 m-1 text-xl font-medium text-gray-400 ring-1 ring-inset ring-grey-700/10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" fill="currentColor"
+                    viewBox="0 0 1024 1024" version="1.1">
+                    <path
+                        d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                        fill="" />
+                </svg> Female
+            </span>
+            
+
+        </div>
+
+    </div>
+
+        
+            
+            <!-- <div class="relative  ">
+                <span class=" text-dark font-bold text-8xl"><span
+                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-3xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                    Uncapped Players: 0
+                </span>
+                <span class="text-dark font-bold text-8xl"><span
+                    class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-3xl font-medium text-pink-500 ring-1 ring-inset ring-blue-700/10">
+                    Female Players: 0
+                </span>
+                
+
+            </div> -->
+
+
+      
+            
+            
+        </span>
+        <div class="divide-y divide-gray-300/50">
+            <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
+                <div class="block flex-auto px-9 py-8 pt-6">
+                    <div class="overflow-x-auto">
+                        <table class="text-dark my-0  w-full border-neutral-200 align-middle">
+                            <thead class="align-bottom text-dpl-red text-4xl">
+                                <tr class="font-semibold">
+                                    <th class="pb-3 min-w-[175px] text-start">PLAYER</th>
+                                    <th class="pb-3">BASE PRICE</th>
+                                    <th class="pb-3">SOLD FOR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-dashed last:border-b-0">
+                                    <td class="p-3 pl-0">
+                                        <div class="flex items-center">
+                                            <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                    class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                    alt="" />
+                                            </div>
+                                            <div class="">
+                                                <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+                                                <span
+                                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                        viewBox="0 0 24 24" stroke-width="1.5"
+                                                        stroke="currentColor" class="mr-1 h-5 w-5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                                                    </svg>
+                                                    Uncapped</span>
+                                                <span
+                                                    class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xl font-medium text-pink-500 ring-1 ring-inset ring-pink-700/10">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5"
+                                                        fill="currentColor" viewBox="0 0 1024 1024"
+                                                        version="1.1">
+                                                        <path
+                                                            d="M895.606124 792.06332a212.29599 212.29599 0 0 1 8.16523 38.840015A367.65605 367.65605 0 0 1 906.419537 878.349944a276.07306 276.07306 0 0 1-3.530911 45.460472 88.272761 88.272761 0 0 1-10.813413 32.660922 61.790933 61.790933 0 0 1-28.688647 14.785687q-23.612964 7.723867-58.701386 15.227052t-78.121394 14.785687q-42.812289 7.061821-86.286624 12.358187t-83.197077 7.723866q-39.502061 2.648183-69.956163 2.648183t-66.204571-3.089547q-37.736605-3.089547-78.121394-7.723866t-79.666167-10.813413q-40.826152-5.958411-72.162982-12.578869t-54.729112-12.358186a83.638441 83.638441 0 0 1-28.688647-10.813414 88.272761 88.272761 0 0 1-15.889097-49.653428 390.606968 390.606968 0 0 1 4.855002-107.472086 86.727988 86.727988 0 0 1 30.674784-56.273886 191.772574 191.772574 0 0 1 57.156613-30.674784q32.660922-11.254777 67.970026-20.523417a208.103034 208.103034 0 0 0 61.790933-26.481828 177.869614 177.869614 0 0 0 30.674784-23.612964 81.431622 81.431622 0 0 0 16.330461-22.06819 74.149119 74.149119 0 0 0 6.620457-22.068191 116.078681 116.078681 0 0 0 0-24.495691l-90.038216-12.358186a117.844136 117.844136 0 0 1-32.660922-38.840015 245.83964 245.83964 0 0 1-22.06819-58.701386 394.137878 394.137878 0 0 1-9.710004-96.658674q0-48.991382 5.075684-104.823904A383.986511 383.986511 0 0 1 244.373828 166.209444 272.321468 272.321468 0 0 1 303.516578 75.067818 244.956912 244.956912 0 0 1 411.209347 14.380295a198.613712 198.613712 0 0 1 39.943424-9.710004q19.420007-2.648183 37.736606-4.63432H531.260302a193.317347 193.317347 0 0 1 90.47958 20.523417 244.294866 244.294866 0 0 1 68.41139 52.963657 317.78194 317.78194 0 0 1 50.094792 74.590483 497.858373 497.858373 0 0 1 32.219558 83.859123 528.312475 528.312475 0 0 1 16.330461 81.21094 447.984263 447.984263 0 0 1 3.53091 66.204571 339.188085 339.188085 0 0 1-13.90296 77.238666 504.699512 504.699512 0 0 1-22.06819 58.701386 304.761708 304.761708 0 0 1-29.571375 51.198202l-100.189584 16.33046a104.38254 104.38254 0 0 0 1.544773 27.143874 79.004121 79.004121 0 0 0 10.813414 27.143874A101.513675 101.513675 0 0 0 663.669444 663.185089a145.208692 145.208692 0 0 0 39.943424 22.06819 445.33608 445.33608 0 0 0 54.729112 18.316598q30.233421 8.16523 58.260022 18.978644a207.220307 207.220307 0 0 1 50.094792 27.143874 82.31435 82.31435 0 0 1 30.233421 42.812289z"
+                                                            fill="" />
+                                                    </svg> Female</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="p-3 pr-0 text-center">
+                                        <span class="mb-1 text-5xl font-semibold">100K</span>
+                                    </td>
+                                    <td class="p-3 flex justify-center pr-0 text-center">
+                                        <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                    </td>
+
+
+
+                                </tr>
+                                <tr class="border-b border-dashed last:border-b-0">
+                                    <td class="p-3 pl-0">
+                                        <div class="flex items-center">
+                                            <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                    class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                    alt="" />
+                                            </div>
+                                            <div class="">
+                                                <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="p-3 pr-0 text-center">
+                                        <span class="mb-1 text-5xl font-semibold">100K</span>
+                                    </td>
+                                    <td class="p-3 flex justify-center pr-0 text-center">
+                                        <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-dashed last:border-b-0">
+                                    <td class="p-3 pl-0">
+                                        <div class="flex items-center">
+                                            <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                    class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                    alt="" />
+                                            </div>
+                                            <div class="">
+                                                <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="p-3 pr-0 text-center">
+                                        <span class="mb-1 text-5xl font-semibold">100K</span>
+                                    </td>
+                                    <td class="p-3 flex justify-center pr-0 text-center">
+                                        <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-dashed last:border-b-0">
+                                    <td class="p-3 pl-0">
+                                        <div class="flex items-center">
+                                            <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                    class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                    alt="" />
+                                            </div>
+                                            <div class="">
+                                                <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="p-3 pr-0 text-center">
+                                        <span class="mb-1 text-5xl font-semibold">100K</span>
+                                    </td>
+                                    <td class="p-3 flex justify-center pr-0 text-center">
+                                        <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-dashed last:border-b-0">
+                                    <td class="p-3 pl-0">
+                                        <div class="flex items-center">
+                                            <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                    class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                    alt="" />
+                                            </div>
+                                            <div class="">
+                                                <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="p-3 pr-0 text-center">
+                                        <span class="mb-1 text-5xl font-semibold">100K</span>
+                                    </td>
+                                    <td class="p-3 flex justify-center pr-0 text-center">
+                                        <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-dashed last:border-b-0">
+                                    <td class="p-3 pl-0">
+                                        <div class="flex items-center">
+                                            <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                    class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                    alt="" />
+                                            </div>
+                                            <div class="">
+                                                <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="p-3 pr-0 text-center">
+                                        <span class="mb-1 text-5xl font-semibold">100K</span>
+                                    </td>
+                                    <td class="p-3 flex justify-center pr-0 text-center">
+                                        <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-dashed last:border-b-0">
+                                    <td class="p-3 pl-0">
+                                        <div class="flex items-center">
+                                            <div class="relative me-3 inline-block shrink-0 rounded-2xl">
+                                                <img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/img-49-new.jpg"
+                                                    class="inline-block h-[50px] w-[50px] shrink-0 rounded-xl"
+                                                    alt="" />
+                                            </div>
+                                            <div class="">
+                                                <a class="mb-1 text-5xl font-semibold"> Player 1 </a>
+
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="p-3 pr-0 text-center">
+                                        <span class="mb-1 text-5xl font-semibold">100K</span>
+                                    </td>
+                                    <td class="p-3 flex justify-center pr-0 text-center">
+                                        <span class=" inline-block mb-1 text-5xl font-semibold">150K</span>
+
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mx-auto mt-10 grid grid-cols-2 pt-5 justify-items-center ">
+                <span class="flex col-span-2  font-bold text-6xl text-red-600 object-contain">Purse
+                    Amount</span>
+                <span class="flex col-span-2  font-bold text-8xl object-contain"> 180K</span>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- End -->
+    </div>
+</div>
+
 {% endblock %}
